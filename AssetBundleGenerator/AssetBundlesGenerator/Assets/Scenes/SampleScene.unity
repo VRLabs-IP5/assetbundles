@@ -325,7 +325,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611544061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d6abb6a0bcd8e43bd3f55ff5b37632, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c8609c48e74e304b991e3948ef1f937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   assetName: BundledSpriteObject

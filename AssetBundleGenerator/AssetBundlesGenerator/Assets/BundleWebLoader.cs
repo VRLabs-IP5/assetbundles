@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BundleWebLoader : MonoBehaviour
 {
-    public bundleURL = ""
+    // public bundleURL = ""
     // Start is called before the first frame update
     void Start()
     {
