@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 259798080
+CRC: 1697797781
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dee24d7a9951c1aa4d6c9f435226eeb4
+    Hash: 98febbac270232debbb6f0d0f16c5fa4
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ccdf19e42652927b3ca1379ec4c0235c
+    Hash: 793001ca8432944352cf7b5e7ea3f9f2
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -23,10 +23,13 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 65
+- Class: 114
+  Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+- Class: 115
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Prefabs/WebAsset/red.mat
-- Assets/Prefabs/WebAsset/Cube.prefab
+- Assets/Prefabs/SyncObject.prefab
+- Assets/Prefabs/SyncObjectResources/Default4.mat
+- Assets/Prefabs/SyncObjectResources/FHNWGeb5_6 v5.fbx
 Dependencies: []
