@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1697797781
+CRC: 1190068760
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 98febbac270232debbb6f0d0f16c5fa4
+    Hash: e0d212c0ddf0dc531f9e2d2d786ea9a5
   TypeTreeHash:
     serializedVersion: 2
     Hash: 793001ca8432944352cf7b5e7ea3f9f2
@@ -29,7 +29,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Prefabs/SyncObject.prefab
+- Assets/Prefabs/WebAsset.prefab
 - Assets/Prefabs/SyncObjectResources/Default4.mat
 - Assets/Prefabs/SyncObjectResources/FHNWGeb5_6 v5.fbx
 Dependencies: []

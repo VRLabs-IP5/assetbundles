@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7714084716420974096}
   - component: {fileID: 7714084716420974107}
   m_Layer: 0
-  m_Name: SyncObject
+  m_Name: WebAsset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -23,45 +23,47 @@ public class BundleWebLoader : MonoBehaviour
     {
         Debug.Log("start Loading asset");
 
-        // string assetUri = "https://vrlabs-ip5.github.io/assetbundles/assetbundles/" +
-        //                   _selectedAsset.ToLower();
-        // using (UnityWebRequest webRequest = UnityWebRequestAssetBundle.GetAssetBundle(assetUri))
-        // {
-        //     yield return webRequest.SendWebRequest();
-        //
-        //     Debug.Log("Webrequest sent");
-        //     if (webRequest.result != UnityWebRequest.Result.Success)
-        //     {
-        //         Debug.LogError("Webrequest failed on URI: " + assetUri);
-        //     }
-        //     else
-        //     {
-        //         // Get downloaded asset bundle
-        //         Debug.Log("Webrequest succeeded, get assetbundle");
-        //         AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(webRequest);
-        AssetBundle bundle = AssetBundle.LoadFromFile("../../assetbundles/projekt gold");
-        AssetBundleRequest assetBundleRequest = bundle.LoadAssetAsync<GameObject>("WebAsset");
-        yield return assetBundleRequest;
-
-        GameObject prefab = assetBundleRequest.asset as GameObject;
-
-
-        if (prefab != null)
+        string assetUri = "https://vrlabs-ip5.github.io/assetbundles/assetbundles/" +
+                          _selectedAsset.ToLower();
+        using (UnityWebRequest webRequest = UnityWebRequestAssetBundle.GetAssetBundle(assetUri))
         {
-            Debug.Log("Found Asset " + _assetName + " in " + _selectedAsset);
-            bundle.Unload(false);
-            Instantiate(prefab);
+            yield return webRequest.SendWebRequest();
+
+            Debug.Log("Webrequest sent");
+            if (webRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Webrequest failed on URI: " + assetUri);
+            }
+            else
+            {
+                // Get downloaded asset bundle
+                Debug.Log("Webrequest succeeded, get assetbundle");
+                AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(webRequest);
+
+                //Get assetbundle local
+                // AssetBundle bundle = AssetBundle.LoadFromFile("../../assetbundles/projekt gold");
+                AssetBundleRequest assetBundleRequest = bundle.LoadAssetAsync<GameObject>("WebAsset");
+                yield return assetBundleRequest;
+
+                GameObject prefab = assetBundleRequest.asset as GameObject;
+
+
+                if (prefab != null)
+                {
+                    Debug.Log("Found Asset " + _assetName + " in " + _selectedAsset);
+                    bundle.Unload(false);
+                    Instantiate(prefab);
+                }
+                else
+                {
+                    Debug.LogError("The Asset " + _assetName + " could not be found in " + _selectedAsset);
+                }
+            }
         }
-        else
-        {
-            Debug.LogError("The Asset " + _assetName + " could not be found in " + _selectedAsset);
-        }
-        // }
+
+        Debug.Log("end of Loading Assets");
+        // return null;
     }
-
-    // Debug.Log("end of Loading Assets");
-    // return null;
-}
 
 // private readonly string _assetName = "BundledSpriteObject";
 // private readonly string _assetPackName = "testbundle";
@@ -111,4 +113,4 @@ public class BundleWebLoader : MonoBehaviour
 //     
 //     Debug.Log("end of Laoding Assets");
 // }
-// }
+}
