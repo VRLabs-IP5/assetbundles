@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 1876917667
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7e89fcf9b4f78076f43dcc90b7d2a776
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 793001ca8432944352cf7b5e7ea3f9f2
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/WebAsset/SyncObject.prefab
+- Assets/Prefabs/WebAsset/Default4.mat
+- Assets/Prefabs/WebAsset/FHNWGeb5_6 v5.fbx
+Dependencies: []

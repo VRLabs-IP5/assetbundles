@@ -1,29 +1,25 @@
 ManifestFileVersion: 0
-CRC: 779450236
+CRC: 150348852
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9aec3c33ddd33b270fa659b9db37ea53
+    Hash: 907b549f145766141c936ff785c21e6e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 37cdc2564ca5f57602a6371fa5a6e74b
+    Hash: 85957ef15f2070ad0a4833d80c291085
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
 - Class: 4
   Script: {instanceID: 0}
-- Class: 21
+- Class: 23
   Script: {instanceID: 0}
-- Class: 28
+- Class: 33
   Script: {instanceID: 0}
-- Class: 48
-  Script: {instanceID: 0}
-- Class: 212
-  Script: {instanceID: 0}
-- Class: 213
-  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/BundledAssets/testbundle/BundledSpriteObject.prefab
+- Assets/Prefabs/SyncObject.prefab
 Dependencies: []

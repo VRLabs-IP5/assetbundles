@@ -1,22 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
-public class CreateAssetBundles
+namespace Editor
 {
-    [MenuItem("Assets/Build AssetBundles")]
-    static void BuildAssetBundles()
+    public static class CreateAssetBundles
     {
-        string abDirectory = "Assets/StreamingAssets";    //"../assetbundles"; //?
-        if (!Directory.Exists(Application.streamingAssetsPath))
+        [MenuItem("Assets/Build AssetBundles")]
+        static void BuildAssetBundles()
         {
-            Directory.CreateDirectory(abDirectory);
-        }
+            string abDirectory =   "../../assetbundles"; //?"Assets/StreamingAssets";
+            if (!Directory.Exists(abDirectory))
+            {
+                Directory.CreateDirectory(abDirectory);
+                Debug.Log("Created folder " + abDirectory);
+            }
 
-        BuildPipeline.BuildAssetBundles(abDirectory, BuildAssetBundleOptions.None,
-            EditorUserBuildSettings.activeBuildTarget);
+            BuildPipeline.BuildAssetBundles(abDirectory, BuildAssetBundleOptions.None,
+                EditorUserBuildSettings.activeBuildTarget);
+            Debug.Log("created AssetBundles");
+        }
     }
 }
