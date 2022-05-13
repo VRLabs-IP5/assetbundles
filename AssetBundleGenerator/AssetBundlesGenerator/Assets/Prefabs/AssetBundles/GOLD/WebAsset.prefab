@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6576038193801936582}
   - component: {fileID: 4114719944769436346}
   m_Layer: 0
-  m_Name: FH
+  m_Name: FHNWgold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5656873733879411025}
-  m_Mesh: {fileID: 5358915128574053833, guid: b26f66b5059c6b8468c64ca8ff622231, type: 3}
+  m_Mesh: {fileID: 5358915128574053833, guid: 1b656d775ca17524ab8180eaaa95123d, type: 3}
 --- !u!23 &4114719944769436346
 MeshRenderer:
   m_ObjectHideFlags: 0
