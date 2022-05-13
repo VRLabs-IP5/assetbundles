@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
@@ -20,14 +21,14 @@ namespace Editor
             BuildPipeline.BuildAssetBundles(_abDirectory, BuildAssetBundleOptions.None,
                 BuildTarget.StandaloneWindows64);
             AppendPlatformToFileName("VR");
-            
+
             BuildPipeline.BuildAssetBundles(_abDirectory, BuildAssetBundleOptions.None,
                 BuildTarget.Android);
             Debug.Log("created AssetBundles");
             AppendPlatformToFileName("AR");
         }
 
-       //by Third Aurora: https://github.com/Third-Aurora/AssetBundles/blob/master/Assets/Editor/CreateAssetBundles.cs
+        //by Third Aurora: https://github.com/Third-Aurora/AssetBundles/blob/master/Assets/Editor/CreateAssetBundles.cs
         static void AppendPlatformToFileName(string platform)
         {
             foreach (string path in Directory.GetFiles(_abDirectory))
@@ -45,7 +46,14 @@ namespace Editor
                 {
                     //append platform to filename
                     FileInfo info = new FileInfo(path);
-                    info.Replace(path + "_" + platform, path+"_"+platform+"_OLD");
+                    try
+                    {
+                        info.Replace(path + "_" + platform, path + "_" + platform + "_OLD");
+                    }
+                    catch (FileNotFoundException e)
+                    {
+                        info.MoveTo(path + "_" + platform);
+                    }
                 }
             }
         }
