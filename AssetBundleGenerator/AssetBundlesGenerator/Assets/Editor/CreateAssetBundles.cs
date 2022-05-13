@@ -37,7 +37,7 @@ namespace Editor
                 string fileName = files[files.Length - 1];
 
                 //delete files we dont need
-                if (fileName.Contains(".") || fileName.Contains("Bundle"))
+                if (fileName.Contains(".") || fileName.Contains("Bundle") || fileName.Contains("_OLD"))
                 {
                     File.Delete(path);
                 }
@@ -45,7 +45,7 @@ namespace Editor
                 {
                     //append platform to filename
                     FileInfo info = new FileInfo(path);
-                    info.MoveTo(path + "_" + platform);
+                    info.Replace(path + "_" + platform, path+"_"+platform+"_OLD");
                 }
             }
         }
