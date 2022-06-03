@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8636317622445988512}
   - component: {fileID: 1658049555413512867}
   - component: {fileID: 7956847103363894212}
+  - component: {fileID: 552896746204545476}
   m_Layer: 0
   m_Name: FHNWblue
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &552896746204545476
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177832569327618011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5358915128574053833, guid: b26f66b5059c6b8468c64ca8ff622231, type: 3}
 --- !u!1 &7714084716420974099
 GameObject:
   m_ObjectHideFlags: 0
