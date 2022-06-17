@@ -7,8 +7,11 @@ namespace Editor
 {
     public static class CreateAssetBundles
     {
-        private static string _abDirectory = "../../assetbundles"; //?"Assets/StreamingAssets";
+        private static string _abDirectory = "../../assetbundles";
 
+        /// <summary>
+        /// Builds AssetBundles, for PC VR and AR, creates folder if not yet present
+        /// </summary>
         [MenuItem("Assets/Build AssetBundles")]
         static void BuildAssetBundles()
         {
@@ -28,7 +31,11 @@ namespace Editor
             AppendPlatformToFileName("AR");
         }
 
-        //by Third Aurora: https://github.com/Third-Aurora/AssetBundles/blob/master/Assets/Editor/CreateAssetBundles.cs
+        /// <summary>
+        /// Changes the Names of the files depending on their buildplatform and createds "_OLD" files of the previous generation
+        /// strongly based on a script by Third Aurora: https://github.com/Third-Aurora/AssetBundles/blob/master/Assets/Editor/CreateAssetBundles.cs
+        /// </summary>
+        /// <param name="platform"> which platform name to append to the name</param>
         static void AppendPlatformToFileName(string platform)
         {
             foreach (string path in Directory.GetFiles(_abDirectory))
